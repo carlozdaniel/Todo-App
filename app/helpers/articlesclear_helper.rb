@@ -1,0 +1,2 @@
+module ArticlesclearHelper
+end
