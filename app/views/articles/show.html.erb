@@ -2,6 +2,9 @@
   <h1> <%= @article.title%></h1>
   <div>
     <p> Escrito por: <strong><%= @article.user.email%></strong></p>
+    <% if current_user.avatar.attached?%>
+    <%= image_tag url_for(current_user.avatar), height:30 %>
+    <% end%>
   </div>
   <div>
     <%= @article.content%>
