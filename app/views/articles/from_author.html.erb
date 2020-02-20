@@ -1,0 +1,5 @@
+<div class="large-container center-block">
+  <h1> Articulos publicados por <%= @user.email  %> </h1>
+  <div>
+    <%= render partial: @user.articles %>
+</div>
