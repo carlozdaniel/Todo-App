@@ -8,6 +8,8 @@ Rails.application.routes.draw do
  
   resources :articles do 
     get "user/:user_id", to: "articles#from_author", on: :collection
+    get "user/:user_id/.pdf", to: "articles#from_author", on: :collection
+
   end
 
   # get "articles", to: "articles#index"

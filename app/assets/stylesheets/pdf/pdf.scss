@@ -1,0 +1,15 @@
+tr{
+  border-bottom: solid;
+  border-width:3px;
+  border-color:black;
+}
+td, th{
+  text-align: left;
+}
+th{
+  background-color:#000;
+  color:wheat;
+}
+table, tr, td, th, tbody, thead, tfoot {
+  page-break-inside: avoid !important;
+}

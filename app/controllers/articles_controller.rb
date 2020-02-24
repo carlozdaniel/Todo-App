@@ -5,6 +5,12 @@ class ArticlesController < ApplicationController
   
   def index
     @articles = Article.all
+    respond_to do |format|
+      format.html
+      format.json
+      #format.csv {render text: @articles.to_csv}
+      format.pdf {render template: 'articles/doc', pdf: 'doc'}
+    end 
   end
 
   def show
@@ -12,9 +18,9 @@ class ArticlesController < ApplicationController
   end 
 
   def edit
-  
   end
-
+  
+  
   def update
     @article.update(params[:article])
     redirect_to @article   

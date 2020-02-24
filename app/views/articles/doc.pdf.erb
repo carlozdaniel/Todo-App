@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <%= wicked_pdf_stylesheet_link_tag 'pdf'%>
+  <meta charset="utf-8">
+</head>
+<body>
+    <table>
+      <thead>
+        <tr>
+          <th style="width: 200px";>titulo</th>
+          <th style="width: 200px";>fecha de creacion</th>
+        </tr>
+      </thead>
+
+      <tbody>
+          <% @articles.each do |article| %> 
+        <tr>
+        <td><%= article.title %></td>
+        <td><%= article.created_at %></td>
+        </tr>
+        <%end%>
+      </tbody>      
+    </table>
+  
+</body>
+</html>
+
+
+
+
