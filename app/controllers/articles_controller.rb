@@ -8,7 +8,7 @@ class ArticlesController < ApplicationController
     respond_to do |format|
       format.html
       format.json
-      #format.csv {render text: @articles.to_csv}
+      format.csv { send_data @articles.to_csv }
       format.pdf {render template: 'articles/doc', pdf: 'doc'}
     end 
   end

@@ -1,14 +1,17 @@
 Rails.application.routes.draw do
   devise_for :users
+  resources :articles, only: :index
 
-  get "/bienvenida", to: "home#index"
+  get "/bienvenida", to: "articles#index"
   get "perfil", to: "user#edit"
   root to: "home#index"
   resources :user, only: [:update]
- 
+  
+  #get "articles/.pdf", to: "articles#index", as: :new_pdd
+  
   resources :articles do 
-    get "user/:user_id", to: "articles#from_author", on: :collection
-    get "user/:user_id/.pdf", to: "articles#from_author", on: :collection
+    get "user/:user_id", to: "articles#from_author", on: :collection, as: :list
+    get "user/:user_id/.pdf", to: "articles#from_author", on: :collection, as: :new_pdf
 
   end
 
