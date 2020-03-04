@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   resources :user, only: [:update]
   
   #get "articles/.pdf", to: "articles#index", as: :new_pdd
+  require 'sidekiq/web'
+  mount Sidekiq::Web, at: '/sidekiq'
   
   resources :articles do 
     get "user/:user_id", to: "articles#from_author", on: :collection, as: :list

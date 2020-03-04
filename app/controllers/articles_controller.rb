@@ -10,7 +10,7 @@ class ArticlesController < ApplicationController
       format.json
       format.csv { send_data @articles.to_csv }
       format.pdf {render template: 'articles/doc', pdf: 'doc'}
-    end 
+    end  
   end
 
   def show

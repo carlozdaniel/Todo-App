@@ -1,4 +1,10 @@
 <div class="large-container center-block">
 <h1> Mis Articulos </h1>
    <%= render partial: @articles %>
+     <br>
+     <button><%= link_to  "imprime pdf", articles_path(format: "pdf" )%></button>
+
+     <button>  <%= link_to  "imprime csv", articles_path(format: "csv")%></button>
+
+     
 </div>

@@ -1,0 +1,59 @@
+[33mcommit e7fbc20712f823f0c4ed3356b938e4b379d5f4b4[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: carlozdaniel <a20160383@gmail.com>
+Date:   Tue Feb 25 11:35:30 2020 -0600
+
+    export csv
+
+[33mcommit 64166298ef37d01246130e426022dfd8b9a0e1f0[m
+Author: carlozdaniel <a20160383@gmail.com>
+Date:   Mon Feb 24 11:40:07 2020 -0600
+
+    export pdf
+
+[33mcommit 8da4094c72edcd499491545ce0b4b066c3afa8c4[m
+Author: carlozdaniel <a20160383@gmail.com>
+Date:   Thu Feb 20 13:50:57 2020 -0600
+
+    edit image
+
+[33mcommit d7e0a90ba6c183e399cd9857292ce2004c4f67c5[m
+Author: carlozdaniel <a20160383@gmail.com>
+Date:   Thu Feb 20 10:41:38 2020 -0600
+
+    Users cand CRUD tasks on a list
+
+[33mcommit 1a1aea8952f36bbe88f232646146ad81857a94d6[m
+Author: carlozdaniel <a20160383@gmail.com>
+Date:   Wed Feb 19 02:20:50 2020 -0600
+
+    login with device
+
+[33mcommit 6dcbba052c6d94027bfec6eb490d39fe6b2813b0[m
+Author: carlozdaniel <a20160383@gmail.com>
+Date:   Wed Feb 19 01:24:51 2020 -0600
+
+    app design
+
+[33mcommit bdba8e8916a3b6970292ebdf51d23ce4b9b1fffa[m
+Author: carlozdaniel <a20160383@gmail.com>
+Date:   Wed Feb 19 01:24:04 2020 -0600
+
+    styles
+
+[33mcommit d94238fcc24e55c66170fce72a3556211e287aee[m
+Author: carlozdaniel <a20160383@gmail.com>
+Date:   Wed Feb 19 00:58:05 2020 -0600
+
+    navbar
+
+[33mcommit ab7393ad7656db4e5216a1cca9dad5a02b2cdc58[m
+Author: carlozdaniel <a20160383@gmail.com>
+Date:   Mon Feb 17 23:52:14 2020 -0600
+
+    Users can create, read, update and delete (CRUD) lists of TODOs
+
+[33mcommit ee839406ddf425cc9826d99867b49db2b2a83e5a[m
+Author: carlozdaniel <a20160383@gmail.com>
+Date:   Mon Feb 17 19:56:24 2020 -0600
+
+    new project

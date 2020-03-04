@@ -6,6 +6,13 @@
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
  
     <div class="navbar-nav">
+  
+  <% if user_signed_in?%>
+
+      <% if current_user.avatar.attached?%>
+  <img class=".img-right">  <%= image_tag url_for(current_user.avatar), height:30 %>
+    <% end%>
+
        <li class="nav-item">
     <%= link_to  "inicio", root_path, class:"nav-link" %>
   </li>
@@ -13,7 +20,7 @@
     <%= link_to  "articulos", articles_path, class:"nav-link" %>
   </li>
 
-  <% if user_signed_in?%>
+
     <li class="nav-item">
       <%= link_to  "Escribir", new_article_path, class:"nav-link" %>
     </li>
