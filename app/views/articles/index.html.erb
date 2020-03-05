@@ -1,10 +1,9 @@
 <div class="large-container center-block">
-<h1> Mis Articulos </h1>
+<h1>todos los Articulos </h1>
    <%= render partial: @articles %>
      <br>
-     <button><%= link_to  "imprime pdf", articles_path(format: "pdf" )%></button>
+     <%= link_to  "imprime pdf", articles_path(format: "pdf" ), class: "btn btn-small btn-success"%>
 
-     <button>  <%= link_to  "imprime csv", articles_path(format: "csv")%></button>
-
-     
+     <%= link_to  "imprime csv", articles_path(format: "csv"),class: "btn btn-small btn-success"%>
+    
 </div>

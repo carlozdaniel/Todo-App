@@ -3,13 +3,14 @@
   <div>
     <p> Escrito por: <strong><%= @article.user.email%></strong></p>
     <% if current_user.avatar.attached?%>
-    <%= image_tag url_for(current_user.avatar), height:30 %>
+      <%= image_tag url_for(current_user.avatar), height:30 %>
     <% end%>
   </div>
   <div>
     <%= @article.content%>
   </div>
-  <div>
-    <%=link_to "elimina el articulo", @article, method: :delete %>
-  </div>
+    <div>
+      <%=link_to "elimina el articulo", @article, method: :delete, class: " btn btn-small btn-danger" %>
+      <%= link_to  "editar articulos", edit_article_path(params[:id]), class: "btn btn-small btn-success" %>
+    </div>
 </div>

@@ -1,1 +1,72 @@
 
+<br><br>
+<div class="container emp-profile">
+            <form method="post">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="profile-img">
+                          <% if current_user.avatar.attached?%>
+                              <img class=".img-right">  <%= image_tag url_for(current_user.avatar), height:300 %>
+                          <% end%>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="profile-head">
+                                    <h6>
+                                         <%= link_to  "mis articulos", list_articles_path(1)%> 
+                                    </h6>
+                                    <h1 class="proile-rating">Mi Perfil </h1>
+                            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Informacion del usuario</a>
+                                <li class="nav-item">
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                    
+                              <%= link_to  "Edita mis datos", edit_user_registration_path, class: "btn btn-small btn-success" %>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="profile-work">
+                            <p><%= link_to  "editar foto de perfil", perfil_path %></p>
+                            <h3>Descripción</h3>
+                              <p><%= current_user.user_description %></p><br/>
+                          
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="tab-content profile-tab" id="myTabContent">
+                            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>User Id</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p><%= current_user.id %></p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Name</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p><%= current_user.name %></p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Email</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p><%= current_user.email %></p>
+                                            </div>
+                                        </div>
+                                        </div>
+                            </div>
+                      </div>
+                </div>
+            </form>           
+        </div>
