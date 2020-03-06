@@ -9,11 +9,11 @@
                               <img class=".img-right">  <%= image_tag url_for(current_user.avatar), height:300 %>
                           <% end%>
                         </div>
-                    </div>
+                    </div> 
                     <div class="col-md-6">
                         <div class="profile-head">
                                     <h6>
-                                         <%= link_to  "mis articulos", list_articles_path(1)%> 
+                                         <%= link_to  "mis articulos", author_articles_path(1)%> 
                                     </h6>
                                     <h1 class="proile-rating">Mi Perfil </h1>
                             <ul class="nav nav-tabs" id="myTab" role="tablist">

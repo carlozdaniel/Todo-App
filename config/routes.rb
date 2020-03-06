@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :lists
   devise_for :users
   resources :articles, only: :index
 
@@ -12,7 +13,7 @@ Rails.application.routes.draw do
   mount Sidekiq::Web, at: '/sidekiq'
   
   resources :articles do 
-    get "user/:user_id", to: "articles#from_author", on: :collection, as: :list
+    get "user/:user_id", to: "articles#from_author", on: :collection, as: :author
     get "user/:user_id/.pdf", to: "articles#from_author", on: :collection, as: :new_pdf
 
   end
