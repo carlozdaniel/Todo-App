@@ -9,6 +9,17 @@
   <div>
     <%= @article.content%>
   </div>
+
+<div class="margin-top">
+  <p class="label">tags</p>
+    <% @article.lists.each do |list|%>
+    <span class="badge badge-pill padding" style="background-color:<%=list.color%>"></span>
+    <%= link_to list.title, list%>
+    <%end%>
+  </div>
+
+
+
     <div>
       <%=link_to "elimina el articulo", @article, method: :delete, class: " btn btn-small btn-danger" %>
       <%= link_to  "editar articulos", edit_article_path(params[:id]), class: "btn btn-small btn-success" %>

@@ -18,20 +18,27 @@ class ArticlesController < ApplicationController
   end 
 
   def edit
+    @lists = List.all
+
   end
   
   
   def update
-    @article.update(params[:article])
+    @article.update(article_params)
+    @article.save_lists
     redirect_to @article   
   end
 
   def new
     @article = Article.new
+    @lists = List.all
+
   end
 
   def create
     @article = current_user.articles.create(article_params)
+    
+    @article.save_lists
     redirect_to @article
   end
 
@@ -50,7 +57,7 @@ class ArticlesController < ApplicationController
   end
 
   def article_params
-    params.require(:article).permit(:title,:content)
+    params.require(:article).permit(:title,:content, list_elements: [])
   end
   
 end   
