@@ -1,0 +1,9 @@
+:concurrency: 25
+:pidfile: ./tmp/pids/sidekiq.pid
+:logfile: ./log/sidekiq.log
+:queues:
+ - default
+:schedule:
+  first:
+    cron: '0 * * * * *'   # Runs once per minute
+    class: 'EmailWorker'

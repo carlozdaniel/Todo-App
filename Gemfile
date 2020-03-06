@@ -34,10 +34,11 @@ gem 'wicked_pdf'
 
 gem 'wkhtmltopdf-binary'
 
+gem 'redis-rails'
+
 gem 'sidekiq'
 
-gem 'sinatra', '>= 1.3.0', :require => nil
-
+gem 'sidekiq-scheduler'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

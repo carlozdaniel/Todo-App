@@ -40,6 +40,10 @@ class ArticlesController < ApplicationController
     
     @article.save_lists
     redirect_to @article
+
+    
+    EmailWorker.perform_at(1.minute, @article) 
+  
   end
 
   def destroy

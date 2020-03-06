@@ -1,7 +1,7 @@
 class EmailWorker
   include Sidekiq::Worker
 
-  def perform(*args)
-    ArticleMailer.new_article
+  def perform(article)
+    ArticleMailer.new_article(article).deliver_now  
   end
 end

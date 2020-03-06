@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   require 'sidekiq/web'
   mount Sidekiq::Web, at: '/sidekiq'
   
+  
   resources :articles do 
     get "user/:user_id", to: "articles#from_author", on: :collection, as: :author
     get "user/:user_id/.pdf", to: "articles#from_author", on: :collection, as: :new_pdf

@@ -1,7 +1,7 @@
 class Article < ApplicationRecord
   has_rich_text :content
   belongs_to :user
-  after_create :send_mail
+  # after_create :send_mail
   
   has_many :has_lists 
   has_many :lists, through: :has_lists
@@ -34,9 +34,6 @@ class Article < ApplicationRecord
   end
 
 
-  def send_mail
-    EmailWorker.perform_at(1.week) 
-  end
 
 end
  
