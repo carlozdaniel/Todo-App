@@ -13,13 +13,16 @@
   <img class=".img-right">  <%= image_tag url_for(current_user.avatar), height:30 %>
     <% end%>
 
-       <li class="nav-item">
+    <li class="nav-item">
     <%= link_to  "inicio", root_path, class:"nav-link" %>
   </li>
   <li class="nav-item">
     <%= link_to  "articulos", articles_path, class:"nav-link" %>
   </li>
 
+    <li class="nav-item">
+      <%= link_to  "nueva lista", new_list_path, class:"nav-link" %>
+    </li>
 
     <li class="nav-item">
       <%= link_to  "Escribir", new_article_path, class:"nav-link" %>
