@@ -2,4 +2,8 @@
   <h1> Articulos publicados por <%= @user.email  %> </h1>
   <div>
     <%= render partial: @user.articles %>
+    
+     <%= link_to  "imprime pdf", articles_path(format: "pdf" ), class: "btn btn-small btn-success"%>
+
+     <%= link_to  "imprime csv", articles_path(format: "csv"),class: "btn btn-small btn-success"%>
 </div>

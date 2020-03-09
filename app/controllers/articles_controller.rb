@@ -42,7 +42,7 @@ class ArticlesController < ApplicationController
     redirect_to @article
 
     
-    EmailWorker.perform_at(1.minute, @article) 
+    EmailWorker.perform_at(1.week, @article) 
   
   end
 

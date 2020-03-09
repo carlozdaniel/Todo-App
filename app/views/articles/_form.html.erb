@@ -1,11 +1,11 @@
  <%= form_with(model: @article, local: true) do |form| %>
   <div class="field">
-    <%=form.label :title %>
+    <%=form.label :title, "nombre del articulo" %>
      <%=form.text_field :title %>
   </div>
 
   <div class="field">
-    <%=form.label :list_elements %>
+    <%=form.label :list_elements, "seleciona la lista"%>
      <div class="row">
     <% @lists.each do |list| %>
       <label class="col-6 col-sm-3">
@@ -17,7 +17,7 @@
   </div>
 
   <div class="field">
-    <%=form.label :content %>
+    <%=form.label :content, "contenido" %>
      <%=form.rich_text_area :content %>
   </div>
 
