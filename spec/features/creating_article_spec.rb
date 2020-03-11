@@ -1,20 +1,21 @@
 require  'rails_helper'
 
 describe "creatin article", type: :feature do
-
-  # it "el usuario creara un articulo y lo redirecionara el articulo" do 
-  #   visit '/'
-
-  #   #click_link "new Article"
-   
-  #   fill_in 'article_title', with: 'Creting a blog' 
-  #   fill_in 'article_list_elements_1', with: 'Lorem Imsum'
-
-  #   click_button 'Create Article'
-     
-  #   expect(page).to have_content("")
-    # expect(page.current_path).to aq(article_path)
-    
+before do
+  @user = User.create!(email: 'ejodlfj@gmail.com', password: 'elkfjrlkfjr')
+  
+  visit '/'
+  fill_in "user_email", with: @user.email
+  fill_in "user_password", with: @user.password
+  click_button 'iniciar'
+end 
+    it "the user will create an article and redirect the article" do 
+      # print page.html
+      click_link "Escribir"
+      fill_in 'article_title', with: 'Creting a blog' 
+      #  find(:css, '#user_remember_me').set true
+      click_button 'Create Article'
+      expect(page).to have_content("Creting a blog")
   end
 end 
 

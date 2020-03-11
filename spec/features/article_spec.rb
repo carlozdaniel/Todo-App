@@ -1,16 +1,18 @@
 require  'rails_helper'
 
-describe "the user will initiate section", type: :feature do
-
-  it "redirects to the user profile index after login" do 
-    visit '/users/sign_in'
-    find(:css, '#user_email').set 'a20160383@gmail.com'
-    find(:css, '#user_password').set '123456'
-    find(:css, '#user_remember_me').set true
+describe "show article", type: :feature do
+  before do
+    @user = User.create!(email: 'ejodlfj@gmail.com', password: 'elkfjrlkfjr')
     
+    visit '/'
+    fill_in "user_email", with: @user.email
+    fill_in "user_password", with: @user.password
     click_button 'iniciar'
+    end 
 
-    expect(page).to have_content(//)
+    it "show articles and print PDF" do 
+      click_link "articulos"
+      click_link "imprime pdf"
 
   end
-end
+end 
