@@ -44,10 +44,10 @@ group :development, :test do
 
   gem "letter_opener"
 
-  gem 'sqlite3', '~> 1.4'
+  #gem 'sqlite3', '~> 1.4'
 
   gem 'rspec-rails', '~> 4.0.0.beta'
-#  gem 'factory_bot_rails', '~> 5.1', '>= 5.1.1'
+  #gem 'factory_bot_rails', '~> 5.1', '>= 5.1.1'
 end
 
 group :development do
