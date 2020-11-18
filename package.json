@@ -13,9 +13,6 @@
     "trix": "^1.0.0",
     "turbolinks": "^5.2.0"
   },
-  "scripts": {
-    "start": "node app.js"
- },
   "version": "0.1.0",
   "devDependencies": {
     "webpack-dev-server": "^3.10.3"
