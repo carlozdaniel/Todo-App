@@ -38,13 +38,16 @@ gem 'sidekiq'
 
 gem 'sidekiq-scheduler'
 
+gem 'figaro'
+
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 
   gem "letter_opener"
 
-  gem 'sqlite3', '~> 1.4'
+  gem 'pg'
 
   gem 'rspec-rails', '~> 4.0.0.beta'
 #  gem 'factory_bot_rails', '~> 5.1', '>= 5.1.1'
